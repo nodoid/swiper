@@ -9,25 +9,15 @@ namespace swiper
 {
     public class App : Application
     {
+        public static Size ScreenSize { get; set; }
+        public static App Self { get; private set; }
+
         public App()
         {
+            App.Self = this;
             // The root page of your application
-            var content = new ContentPage
-            {
-                Title = "swiper",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
-                    }
-                }
-            };
 
-            MainPage = new NavigationPage(content);
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

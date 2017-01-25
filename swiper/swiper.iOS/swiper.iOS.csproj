@@ -91,7 +91,9 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
-    <None Include="Info.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
@@ -116,6 +118,22 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="ScnPage.Plugin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ScnSideMenu.Forms.1.2.10\lib\Xamarin.iOS10\ScnPage.Plugin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScnSideMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ScnSideMenu.Forms.1.2.10\lib\Xamarin.iOS10\ScnSideMenu.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScnViewGestures, Version=1.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ScnViewGestures.Forms.1.3.6.1\lib\Xamarin.iOS10\ScnViewGestures.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ScnViewGestures.iOS, Version=1.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ScnViewGestures.Forms.1.3.6.1\lib\Xamarin.iOS10\ScnViewGestures.iOS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -142,6 +160,12 @@
       <Project>{e3393a8c-d11b-4dde-86ff-6cb595b84455}</Project>
       <Name>swiper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\right.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.3.180\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
